@@ -215,67 +215,7 @@ export default function Profile() {
                   </div>
                   <br />
                   <div className="col-lg-12" id="order">
-                    <div className="card ">
-                      <div className="card-body">
-                        <div className="top-status ">
-                          <h4>Orders</h4>
-                          <br />
-                          {orders.map((order, index) => (
-                            <div
-                              key={index}
-                              className="order-card mb-3"
-                              style={{
-                                border: "1px solid gray",
-                                borderRadius: ".5rem",
-                                padding: "10px",
-                              }}
-                            >
-                              {/* Display order information */}
-                              <p>
-                                <span>Reference Number:</span> {order.BillID}
-                              </p>
-                              <p>
-                                <span>Order Date:</span> {order.OrderDate}
-                              </p>
-                              <p>
-                                <span>Order Status:</span> {order.OrderStatus}
-                              </p>
-                              <p>
-                                <span>Total Price:</span> {order.TotalPrice}
-                              </p>
-
-                              {/* Show/Hide Products button */}
-                              <button
-                                className="btn btn-danger"
-                                onClick={() => handleShowProducts(order.BillID)}
-                              >
-                                {showProducts[order.BillID]
-                                  ? "Hide Products"
-                                  : "Show Products"}
-                              </button>
-
-                              {/* Display products if showProducts is true */}
-                              {showProducts[order.BillID] && (
-                                <div className="product-list">
-                                  <h5>Products:</h5>
-                                  <ul>
-                                  {console.log('sdfsdfsd' , order[order.BillID])}
-                                  {order.Products.map((product, productIndex) => (
-                                     <li key={productIndex}>
-                                  <img  style={{width:'105px',borderRadius:"1rem"}} src={product.Image} alt={product.ProductName} />{product.quantity}
-
-                                  {product.ProductName}<br></br>
-                                    </li>
-                                      )
-                                    )}
-                                  </ul><br></br>
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                   
                   </div>
 
                   <br />

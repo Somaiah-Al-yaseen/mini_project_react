@@ -31,7 +31,7 @@ const Login = () => {
         localStorage.setItem('id', response.data.UserId);
 
         // Redirect to the homepage or your desired destination
-        navigate('/');
+        navigate('/UserProfile');
       } else {
         setError('Email or Password Invalid');
       }
